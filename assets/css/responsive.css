@@ -1,0 +1,207 @@
+/* ==========================================================================
+   RESPONSIVE DESIGN (PC & SP / SMARTPHONE)
+   Theo đúng tiêu chuẩn kiểm thử của Fastcoding:
+   - PC: Desktop chuẩn (> 1024px)
+   - Tablet: (769px - 1024px)
+   - SP (Smartphone): (<= 768px)
+   ========================================================================== */
+
+/* ==========================================================================
+   1. TABLET (max-width: 1024px)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  :root {
+    --font-size-hero: 2.75rem;
+    --spacing-section: 72px;
+  }
+
+  .hero__grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+  }
+
+  .hero__image-wrapper {
+    height: 400px;
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  .guides-grid,
+  .services-grid,
+  .properties-grid,
+  .projects-grid,
+  .blogs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-xl);
+  }
+}
+
+/* ==========================================================================
+   2. SMARTPHONE / SP (max-width: 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+  :root {
+    --font-size-hero: 2.125rem;
+    --font-size-3xl: 1.75rem;
+    --font-size-2xl: 1.5rem;
+    --spacing-section: 56px;
+    --container-padding: 16px;
+  }
+
+  /* --- Topbar SP --- */
+  .topbar {
+    display: none; /* Ẩn thanh topbar trên điện thoại cho gọn hoặc cho stack */
+  }
+
+  /* --- Navbar & SP Mobile Menu --- */
+  .navbar__container {
+    height: 68px;
+  }
+
+  .navbar__toggle {
+    display: flex; /* Hiện nút 3 gạch hamburger */
+  }
+
+  .navbar__menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--color-white);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 16px;
+    box-shadow: var(--shadow-card);
+    display: none; /* Bật mở bằng class .is-open từ JS */
+    border-top: 1px solid var(--color-border);
+  }
+
+  .navbar__menu.is-open {
+    display: flex;
+  }
+
+  .navbar__actions {
+    display: none; /* Gộp vào menu mobile hoặc ẩn nút signup phụ */
+  }
+
+  /* --- Hero SP --- */
+  .hero {
+    padding: 48px 0 64px;
+  }
+
+  .hero__title {
+    font-size: var(--font-size-hero);
+  }
+
+  .hero__title-arrow {
+    display: none; /* Ẩn mũi tên vẽ tay nếu chật màn hình */
+  }
+
+  .hero__image-wrapper {
+    height: 320px;
+  }
+
+  .hero__stat-card {
+    left: 10px;
+    bottom: 20px;
+    padding: 12px 16px;
+  }
+
+  .hero__video-card {
+    right: 10px;
+    bottom: 20px;
+    padding: 10px 14px;
+    font-size: var(--font-size-xs);
+  }
+
+  /* --- Chuyển toàn bộ Grid về 1 cột trên điện thoại --- */
+  .guides-grid,
+  .about-space-grid,
+  .about-property-grid,
+  .services-grid,
+  .properties-grid,
+  .testimonial-grid,
+  .projects-grid,
+  .blogs-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .featured-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+  }
+
+  /* --- About & Mosaic SP --- */
+  .about-space__gallery {
+    height: 320px;
+  }
+
+  .about-space__image-main {
+    width: 100%;
+  }
+
+  .about-property__mosaic {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .about-property__mosaic-item--tall {
+    grid-row: span 1;
+    height: 220px;
+  }
+
+  .about-property__mosaic-item {
+    height: 180px;
+  }
+
+  /* --- Testimonial SP --- */
+  .testimonial-avatar-border {
+    display: none;
+  }
+
+  .testimonial-avatar {
+    width: 100%;
+    max-width: 300px;
+    height: 320px;
+  }
+
+  /* --- Form & Newsletter SP --- */
+  .contact-form-card {
+    padding: 24px;
+  }
+
+  .input-group {
+    flex-direction: column;
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .input-group__input {
+    width: 100%;
+    padding: 10px 12px;
+  }
+
+  .input-group .btn {
+    width: 100%;
+  }
+
+  /* --- Footer SP --- */
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,8 @@
+# Thư mục chứa file thiết kế gốc & file thô từ tool
+_raw/
+
+# File hệ thống & IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

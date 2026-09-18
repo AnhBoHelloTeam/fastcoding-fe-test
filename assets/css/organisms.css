@@ -1,0 +1,552 @@
+/* ==========================================================================
+   ATOMIC DESIGN - ORGANISMS (SINH VẬT / CÁC SECTION BỐ CỤC HOÀN CHỈNH)
+   Tập hợp các Molecules và Atoms cấu thành từng khu vực cụ thể trên trang web:
+   Topbar, Navbar, Hero, Guides, Services, Featured, Testimonial, Contact, Footer.
+   ========================================================================== */
+
+/* --- 1. TOPBAR & NAVBAR (Header Organism) --- */
+.topbar {
+  background-color: var(--color-dark);
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.topbar__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topbar__left {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xl);
+}
+
+.header {
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: all var(--transition-base);
+}
+
+.navbar {
+  width: 100%;
+}
+
+.navbar__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 84px;
+}
+
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-heading);
+}
+
+.navbar__brand-logo {
+  height: 32px;
+  width: auto;
+}
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+/* Nút mở menu mobile (SP Hamburger) */
+.navbar__toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  width: 28px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.navbar__toggle span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-heading);
+  border-radius: var(--radius-xs);
+  transition: all var(--transition-fast);
+}
+
+/* --- 2. HERO SECTION ORGANISM --- */
+.hero {
+  padding: 80px 0 100px;
+  background-color: #FAFCFD;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--spacing-3xl);
+  align-items: center;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  position: relative;
+}
+
+.hero__title {
+  font-size: var(--font-size-hero);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-heading);
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+.hero__title-arrow {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 12px;
+  width: 80px;
+  height: auto;
+}
+
+.hero__desc {
+  font-size: var(--font-size-md);
+  color: var(--color-text);
+  max-width: 480px;
+  line-height: 1.7;
+}
+
+.hero__image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 480px;
+}
+
+.hero__main-image {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-placeholder);
+  border-radius: var(--radius-2xl);
+  object-fit: cover;
+}
+
+.hero__stat-card {
+  bottom: 40px;
+  left: -40px;
+}
+
+.hero__video-card {
+  bottom: 80px;
+  right: -20px;
+}
+
+/* Slider indicators đáy hero */
+.hero__slider-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 40px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-muted);
+}
+
+.hero__slider-item.active {
+  color: var(--color-heading);
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 4px;
+}
+
+/* --- 3. COMMERCIAL REAL ESTATE GUIDES --- */
+.guides-section {
+  padding: var(--spacing-section) 0;
+  background-color: var(--color-white);
+}
+
+.guides-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+}
+
+/* --- 4. ABOUT SECTION 1 (DREAM LIVING SPACES) --- */
+.about-space-section {
+  padding: var(--spacing-section) 0;
+  background-color: var(--color-white);
+}
+
+.about-space-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-3xl);
+  align-items: center;
+}
+
+.about-space__gallery {
+  position: relative;
+  height: 460px;
+}
+
+.about-space__image-main {
+  width: 85%;
+  height: 100%;
+  background-color: var(--color-placeholder);
+  border-radius: var(--radius-xl);
+  object-fit: cover;
+}
+
+.about-space__rating-badge {
+  position: absolute;
+  top: -16px;
+  right: 15%;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  padding: 16px 20px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+}
+
+.about-space__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: var(--spacing-xl);
+}
+
+/* --- 5. ABOUT SECTION 2 (TODAY SELLS PROPERTIES) --- */
+.about-property-section {
+  padding: var(--spacing-section) 0;
+  background-color: var(--color-white);
+}
+
+.about-property-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-3xl);
+  align-items: center;
+}
+
+.checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: var(--spacing-lg) 0;
+}
+
+.checklist__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: var(--font-size-sm);
+  color: var(--color-heading);
+  font-weight: var(--font-weight-medium);
+}
+
+.checklist__item::before {
+  content: "■";
+  color: var(--color-primary);
+  font-size: 14px;
+}
+
+.about-property__mosaic {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  grid-template-rows: 180px 180px;
+  gap: 20px;
+}
+
+.about-property__mosaic-item {
+  background-color: var(--color-placeholder);
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.about-property__mosaic-item--tall {
+  grid-row: span 2;
+}
+
+/* --- 6. SERVICES SECTION --- */
+.services-section {
+  padding: var(--spacing-section) 0;
+  background-color: var(--color-bg-light);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+}
+
+/* --- 7. FEATURED PROPERTY SECTION --- */
+.featured-section {
+  padding: var(--spacing-section) 0;
+  background-color: var(--color-white);
+}
+
+.featured-header-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.tabs-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.tab-btn {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-muted);
+  padding-bottom: 6px;
+  border-bottom: 2px solid transparent;
+  transition: all var(--transition-fast);
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+  color: var(--color-heading);
+  border-color: var(--color-primary);
+}
+
+.properties-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-2xl);
+}
+
+/* --- 8. TESTIMONIALS SECTION --- */
+.testimonial-section {
+  padding: var(--spacing-section) 0;
+  background-color: var(--color-white);
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: var(--spacing-3xl);
+  align-items: center;
+}
+
+.testimonial-avatar-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.testimonial-avatar-border {
+  width: 340px;
+  height: 420px;
+  border: 12px solid var(--color-primary);
+  border-radius: var(--radius-2xl);
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+}
+
+.testimonial-avatar {
+  width: 340px;
+  height: 420px;
+  background-color: var(--color-placeholder);
+  border-radius: var(--radius-2xl);
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+}
+
+.testimonial-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.testimonial-quote-icon {
+  font-size: 64px;
+  line-height: 1;
+  color: var(--color-primary);
+  font-family: Georgia, serif;
+}
+
+.testimonial-text {
+  font-size: var(--font-size-lg);
+  color: var(--color-heading);
+  line-height: 1.8;
+  font-weight: var(--font-weight-medium);
+}
+
+.testimonial-author-name {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-heading);
+}
+
+.testimonial-author-role {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.testimonial-nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+/* --- 9. PROJECTS & NEWSLETTER SECTION --- */
+.projects-section {
+  padding: var(--spacing-section) 0;
+  background-color: var(--color-bg-light);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.city-card {
+  height: 160px;
+  border-radius: var(--radius-xl);
+  background-color: var(--color-placeholder);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--color-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.city-card__title {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.newsletter-box {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--spacing-xl);
+}
+
+/* --- 10. BLOG SECTION --- */
+.blog-section {
+  padding: var(--spacing-section) 0;
+  background-color: var(--color-white);
+}
+
+.blogs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-2xl);
+}
+
+/* --- 11. CONTACT SECTION --- */
+.contact-section {
+  padding: var(--spacing-section) 0;
+  background-color: var(--color-white);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-3xl);
+  align-items: center;
+}
+
+.contact-form-card {
+  background-color: var(--color-bg-light);
+  border-radius: var(--radius-2xl);
+  padding: 48px;
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-form-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-heading);
+}
+
+/* --- 12. FOOTER ORGANISM --- */
+.footer {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  padding: 80px 0 0;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1.2fr;
+  gap: var(--spacing-2xl);
+  padding-bottom: 60px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.footer__col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer__title {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-white);
+  margin-bottom: 8px;
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer__link {
+  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.7);
+  transition: color var(--transition-fast);
+}
+
+.footer__link:hover {
+  color: var(--color-primary);
+}
+
+.footer__bottom {
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--font-size-xs);
+  color: rgba(255, 255, 255, 0.5);
+}
