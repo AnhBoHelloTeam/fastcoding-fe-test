@@ -1,10 +1,5 @@
-/* ==========================================================================
-   ATOMIC DESIGN - MOLECULES (PHÂN TỬ)
-   Sự kết hợp của nhiều Atoms tạo thành các khối chức năng nhỏ có thể tái sử dụng:
-   Thẻ card (Card molecules), Nhóm liên hệ (Info items), Rating, Input group.
-   ========================================================================== */
-
-/* --- 1. NHÓM THÔNG TIN LIÊN HỆ & MẠNG XÃ HỘI (Top bar molecules) --- */
+/* Components */
+/* Topbar items */
 .info-item {
   display: inline-flex;
   align-items: center;
@@ -49,15 +44,16 @@
   transform: translateY(-2px);
 }
 
-/* --- 2. THANH ĐIỀU HƯỚNG (Nav links) --- */
+/* Nav links */
 .nav-link {
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-medium);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1;
   color: var(--color-heading);
-  padding: 8px 12px;
-  border-radius: var(--radius-xs);
+  padding: 6px 0;
   transition: color var(--transition-fast);
   position: relative;
+  white-space: nowrap;
 }
 
 .nav-link:hover,
@@ -69,14 +65,14 @@
   content: "";
   position: absolute;
   bottom: 0;
-  left: 12px;
-  right: 12px;
+  left: 0;
+  right: 0;
   height: 2px;
   background-color: var(--color-primary);
   border-radius: 2px;
 }
 
-/* --- 3. THẺ STATS NỔI (Hero Floating Molecules) --- */
+/* Floating stats card */
 .floating-stat-card {
   position: absolute;
   background-color: var(--color-white);
@@ -127,7 +123,7 @@
   z-index: 2;
 }
 
-/* --- 4. THẺ HƯỚNG DẪN (Guide Card Molecule) --- */
+/* Guide card */
 .guide-card {
   background-color: var(--color-white);
   border-radius: var(--radius-xl);
@@ -189,7 +185,7 @@
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* --- 5. TÍNH NĂNG KÈM ICON (Feature Item Molecule) --- */
+/* Feature item */
 .feature-item {
   display: flex;
   align-items: flex-start;
@@ -235,7 +231,7 @@
   line-height: 1.5;
 }
 
-/* --- 6. THẺ DỊCH VỤ (Service Card Molecule) --- */
+/* Service card */
 .service-card {
   background-color: var(--color-white);
   border-radius: var(--radius-xl);
@@ -292,7 +288,7 @@
   color: var(--color-primary);
 }
 
-/* --- 7. THẺ BẤT ĐỘNG SẢN (Property Card Molecule) --- */
+/* Property card */
 .property-card {
   background-color: var(--color-white);
   border-radius: var(--radius-xl);
@@ -352,7 +348,7 @@
   color: var(--color-primary);
 }
 
-/* --- 8. ĐÁNH GIÁ SAO (Rating Molecule) --- */
+/* Rating */
 .star-rating {
   display: flex;
   align-items: center;
@@ -360,7 +356,7 @@
   color: var(--color-yellow);
 }
 
-/* --- 9. NHÓM Ô NHẬP NEWSLETTER (Input Group Molecule) --- */
+/* Newsletter input group */
 .input-group {
   display: flex;
   align-items: center;
@@ -382,7 +378,7 @@
   color: var(--color-text-muted);
 }
 
-/* --- 10. THẺ BÀI VIẾT BLOG (Blog Card Molecule) --- */
+/* Blog card */
 .blog-card {
   background-color: var(--color-white);
   border-radius: var(--radius-xl);

@@ -1,10 +1,5 @@
-/* ==========================================================================
-   ATOMIC DESIGN - ATOMS (NGUYÊN TỬ)
-   Các phần tử giao diện cơ bản nhất, không thể phân rã nhỏ hơn được nữa:
-   Container, Nút bấm (Buttons), Nhãn (Badges), Ô nhập liệu (Inputs), Tiêu đề (Headings).
-   ========================================================================== */
-
-/* --- 1. KHUNG CHỨA (Container Layout Atom) --- */
+/* Base UI elements */
+/* Container */
 .container {
   width: 100%;
   max-width: var(--container-max-width);
@@ -14,7 +9,7 @@
   padding-right: var(--container-padding);
 }
 
-/* --- 2. NÚT BẤM (Button Atoms) --- */
+/* Buttons */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -103,7 +98,7 @@
   transform: translateY(-2px);
 }
 
-/* --- 3. BADGES & TAGS (Huy hiệu & Nhãn) --- */
+/* Badges */
 .badge {
   display: inline-flex;
   align-items: center;
@@ -140,7 +135,7 @@
   line-height: 1.2;
 }
 
-/* --- 4. TIÊU ĐỀ SECTION (Section Headings) --- */
+/* Section headers */
 .section-header {
   margin-bottom: var(--spacing-2xl);
 }
@@ -177,7 +172,7 @@
   line-height: var(--line-height-base);
 }
 
-/* --- 5. FORM CONTROLS (Ô nhập liệu) --- */
+/* Form controls */
 .form-group {
   display: flex;
   flex-direction: column;

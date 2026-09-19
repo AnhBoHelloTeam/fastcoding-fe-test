@@ -1,10 +1,5 @@
-/* ==========================================================================
-   ATOMIC DESIGN - ORGANISMS (SINH VẬT / CÁC SECTION BỐ CỤC HOÀN CHỈNH)
-   Tập hợp các Molecules và Atoms cấu thành từng khu vực cụ thể trên trang web:
-   Topbar, Navbar, Hero, Guides, Services, Featured, Testimonial, Contact, Footer.
-   ========================================================================== */
-
-/* --- 1. TOPBAR & NAVBAR (Header Organism) --- */
+/* Layout sections */
+/* Header */
 .topbar {
   background-color: var(--color-dark);
   min-height: 48px;
@@ -14,6 +9,7 @@
 }
 
 .topbar__content {
+  max-width: 1470px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -37,13 +33,16 @@
 
 .navbar {
   width: 100%;
+  padding-top: 13px;
+  background-color: var(--color-white);
 }
 
 .navbar__container {
+  max-width: 1470px;
+  height: 55px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 84px;
 }
 
 .navbar__brand {
@@ -52,18 +51,16 @@
 }
 
 .navbar__brand-logo {
-  height: 38px;
-  width: auto;
+  width: 172px;
+  height: 55px;
   display: block;
   object-fit: contain;
 }
 
-/* Cụm nav ber: Width ~963px, Height ~53px chuẩn Figma */
 .navbar__nav-group {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  gap: 40px;
+  gap: 36px;
   height: 53px;
 }
 
@@ -80,10 +77,10 @@
 }
 
 .btn--signup {
-  height: 52px;
-  padding: 0 32px;
+  height: 53px;
+  padding: 0 34px;
   border-radius: 8px;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 600;
   display: inline-flex;
   align-items: center;
@@ -94,10 +91,14 @@
 .navbar__toggle {
   display: none;
   flex-direction: column;
+  justify-content: center;
   gap: 5px;
   width: 28px;
   height: 24px;
+  background: transparent;
+  border: none;
   cursor: pointer;
+  padding: 0;
 }
 
 .navbar__toggle span {
@@ -109,9 +110,21 @@
   transition: all var(--transition-fast);
 }
 
-/* --- 2. HERO SECTION ORGANISM --- */
+.navbar__toggle.is-active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.navbar__toggle.is-active span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar__toggle.is-active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Hero section */
 .hero {
-  padding: 40px 0 90px;
+  padding: 20px 0 120px;
   background-color: var(--color-white);
   position: relative;
   overflow: visible;
@@ -119,64 +132,90 @@
 
 .hero__grid {
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 60px;
-  align-items: center;
+  grid-template-columns: 575px 867px;
+  justify-content: space-between;
+  align-items: start;
 }
 
 .hero__content {
   display: flex;
   flex-direction: column;
   position: relative;
+  width: 575px;
+  min-height: 704px;
+  padding-top: 138px;
 }
 
 .hero__title {
-  font-size: 54px;
+  font-size: 64px;
   font-weight: 700;
   color: var(--color-heading);
-  line-height: 1.18;
-  letter-spacing: -1px;
+  line-height: 74px;
+  letter-spacing: -0.015em;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 31px;
 }
 
 .hero__title-arrow {
   position: absolute;
-  top: 85px;
-  left: 235px;
-  width: 175px;
+  top: 140px;
+  left: 365px;
+  width: 250px;
   height: auto;
   pointer-events: none;
+  z-index: 2;
 }
 
 .hero__desc {
-  font-size: 15px;
-  color: var(--color-text);
-  max-width: 440px;
-  line-height: 1.7;
-  margin-bottom: 28px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #9EABB2;
+  max-width: 443px;
+  line-height: 28px;
+  letter-spacing: -0.01em;
+  margin-bottom: 31px;
 }
 
 .hero__actions {
-  margin-bottom: 48px;
+  margin-bottom: 0;
+}
+
+.hero__btn {
+  width: 210px;
+  height: 58px;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 /* Stepper tab góc dưới trái */
 .hero__stepper-nav {
   display: flex;
   align-items: flex-end;
-  margin-top: 10px;
+  margin-top: 185px;
+  width: 418px;
+  height: 80px;
 }
 
 .stepper-tab {
   background: #C4C4C4;
   color: #FFFFFF;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 600;
-  padding: 6px 14px 28px;
+  width: 100px;
+  height: 56px;
+  padding: 8px 12px;
   margin-right: 2px;
   cursor: pointer;
   transition: all var(--transition-fast);
+  display: flex;
+  align-items: flex-start;
 }
 
 .stepper-tab:hover {
@@ -185,17 +224,19 @@
 
 .stepper-tab--active {
   background: #8E8E8E;
-  padding: 10px 18px 42px;
+  width: 82px;
+  height: 80px;
+  padding: 10px 14px;
 }
 
 .stepper-divider {
-  margin: 0 14px 10px;
+  margin: 0 14px 14px;
   color: #071C1F;
   font-weight: bold;
 }
 
 .stepper-pagination {
-  margin-bottom: 8px;
+  margin-bottom: 14px;
   font-size: 12px;
   font-weight: 500;
   color: #808080;
@@ -213,43 +254,50 @@
   color: #C4C4C4;
 }
 
-/* Hero Right: Khối chữ nhật xám lớn */
+/* Hero right: khối xám & thẻ con */
 .hero__image-wrapper {
   position: relative;
-  width: 100%;
-  height: 560px;
+  width: 867px;
+  height: 704px;
 }
 
 .hero__placeholder-box {
   width: 100%;
   height: 100%;
   background-color: #C4C4C4;
-  border-radius: 4px;
+  border-radius: 0;
 }
 
 .hero__stat-card {
   position: absolute;
-  bottom: -30px;
-  left: -40px;
+  width: 240px;
+  height: 190px;
+  left: -49px;
+  bottom: -39px;
   background-color: var(--color-white);
   border-radius: 20px;
-  padding: 22px 32px;
+  padding: 24px 28px;
   box-shadow: 0 14px 45px rgba(0, 0, 92, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   z-index: 3;
 }
 
 .hero__video-card {
   position: absolute;
-  bottom: 0;
+  width: 198px;
+  height: 74px;
   right: 0;
+  bottom: 0;
   background-color: #FF5A3C;
   color: var(--color-white);
-  padding: 14px 24px;
-  border-radius: 8px 0 4px 0;
+  border-radius: 10px 0 0 0;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 14px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   box-shadow: none;
   z-index: 3;
@@ -543,7 +591,7 @@
 .city-card__title {
   font-size: var(--font-size-md);
   font-weight: var(--font-weight-bold);
-  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .newsletter-box {
@@ -592,7 +640,7 @@
   color: var(--color-heading);
 }
 
-/* --- 12. FOOTER ORGANISM --- */
+/* Footer */
 .footer {
   background-color: var(--color-dark);
   color: var(--color-white);

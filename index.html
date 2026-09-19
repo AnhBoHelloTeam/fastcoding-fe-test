@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reanty - Real Estate</title>
 
-  <!-- Google Font: Poppins -->
+  <!-- Google Fonts: Poppins & Nunito -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -54,7 +54,6 @@
           <img src="./assets/images/common/logo.png" alt="Reanty Logo" class="navbar__brand-logo">
         </a>
 
-        <!-- Cụm nav ber: Menu + Log In + Sign Up chuẩn Figma -->
         <div class="navbar__nav-group" id="navMenu">
           <ul class="navbar__menu">
             <li><a href="#home" class="nav-link active">Home</a></li>
@@ -86,7 +85,7 @@
     <section class="hero" id="home">
       <div class="container hero__grid">
         
-        <!-- Cột trái: Tiêu đề, mô tả, nút & stepper -->
+        <!-- Hero content -->
         <div class="hero__content">
           <h1 class="hero__title">
             Find the best Real <br>
@@ -98,12 +97,12 @@
             With over 1 million homes for sale available on the website, Renting can match you with a house.
           </p>
           <div class="hero__actions">
-            <a href="#membership" class="btn btn--primary">
+            <a href="#membership" class="btn btn--primary hero__btn">
               Start membership <i class="fa-solid fa-angle-right"></i>
             </a>
           </div>
 
-          <!-- Stepper Tab: HOUSE 1, 2, 3 góc dưới trái -->
+          <!-- Stepper tabs -->
           <div class="hero__stepper-nav">
             <div class="stepper-tab stepper-tab--active">
               <span>HOUSE 1</span>
@@ -124,12 +123,11 @@
           </div>
         </div>
 
-        <!-- Cột phải: Khối chữ nhật xám lớn & các thẻ nổi -->
+        <!-- Hero image & floating cards -->
         <div class="hero__image-wrapper">
-          <!-- Khối chữ nhật xám phẳng chuẩn Figma -->
           <div class="hero__placeholder-box"></div>
 
-          <!-- Thẻ doanh thu: đè góc dưới trái của khối xám -->
+          <!-- Revenue card -->
           <div class="floating-stat-card hero__stat-card">
             <div class="floating-stat-card__icon">
               <img src="./assets/images/hero/icon-revenue.png" alt="Revenue">
@@ -138,7 +136,7 @@
             <span class="floating-stat-card__label">Revenue</span>
           </div>
 
-          <!-- Nút How it works: nằm sát góc dưới phải -->
+          <!-- Video card -->
           <div class="floating-video-card hero__video-card">
             <span>How it works</span>
             <div class="video-play-icon">

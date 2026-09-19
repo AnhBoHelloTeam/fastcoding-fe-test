@@ -1,15 +1,4 @@
-/* ==========================================================================
-   MASTER STYLESHEET (ATOMIC ARCHITECTURE ENTRY POINT)
-   Tuân thủ nghiêm ngặt yêu cầu của Fastcoding:
-   - 100% Pure CSS, không sử dụng framework trung gian (No Tailwind, No Bootstrap)
-   - Phân cấp theo nguyên lý Atomic Design:
-     1. Reset & Normalize (reset.css)
-     2. Design Tokens / Atoms Data (variables.css)
-     3. Atoms Components (atoms.css)
-     4. Molecules Components (molecules.css)
-     5. Organisms / Layout Sections (organisms.css)
-     6. Cross-device Responsive (responsive.css)
-   ========================================================================== */
+/* Main stylesheet */
 
 @import url('./reset.css');
 @import url('./variables.css');
