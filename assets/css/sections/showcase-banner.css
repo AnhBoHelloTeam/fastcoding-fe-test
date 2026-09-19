@@ -9,26 +9,49 @@
 .showcase-banner__bg {
   position: relative;
   width: 100%;
-  height: 459px;
+  height: 460px;
   background-color: #C4C4C4;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: visible;
 }
 
-/* Floating White Property Card */
+.showcase-banner__container {
+  position: relative;
+  height: 100%;
+}
+
+/* 
+  Graphic Cluster Group (583px wide, anchored 44px from left of container)
+  Matches Figma Graphic layer: 582.95px x 354.48px
+*/
+.showcase-group {
+  position: absolute;
+  top: 0;
+  left: 44px;
+  width: 583px;
+  height: 100%;
+  z-index: 2;
+}
+
+/* 
+  Floating White Property Card (Group 2022)
+  Exact size: 380px x 150px
+  Position: Vertically centered in the 460px banner (top: 155px; bottom: 155px)
+  Aligned flush to the right of the 583px group
+*/
 .showcase-card {
+  position: absolute;
+  top: 155px;
+  right: 0;
+  width: 380px;
+  height: 150px;
+  box-sizing: border-box;
   background-color: var(--color-white);
   border-radius: 20px;
-  padding: 22px 28px;
+  padding: 23px 29px;
   box-shadow: 10px 14px 59px rgba(0, 0, 92, 0.12);
   display: flex;
   align-items: center;
-  gap: 22px;
-  max-width: 380px;
-  width: 100%;
-  z-index: 2;
+  gap: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -58,7 +81,7 @@
 
 .showcase-card__price {
   font-family: var(--font-family-title, 'Nunito', sans-serif);
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 700;
   color: #071C1F;
   line-height: 1.2;
@@ -75,13 +98,13 @@
 .showcase-card__features {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
 }
 
 .showcase-card__feature-item {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
   font-family: 'Nunito', sans-serif;
   font-size: 13px;
   font-weight: 600;
@@ -94,11 +117,16 @@
   object-fit: contain;
 }
 
-/* Orange Circular Unit Badge */
+/* 
+  Orange Circular Unit Badge
+  Size: 100px x 100px circle
+  Position: Anchored to bottom-left of group (left: 0; bottom: -50px),
+  protruding exactly 50px below the bottom edge of the grey banner
+*/
 .showcase-unit-badge {
   position: absolute;
   bottom: -50px;
-  left: calc(50% - 200px);
+  left: 0;
   width: 100px;
   height: 100px;
   background-color: var(--color-primary);
@@ -108,7 +136,7 @@
   align-items: center;
   justify-content: center;
   color: var(--color-white);
-  box-shadow: 0 10px 30px rgba(255, 90, 60, 0.35);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   z-index: 3;
   user-select: none;
   transition: transform 0.3s ease;
@@ -120,7 +148,7 @@
 
 .showcase-unit-badge__label {
   font-family: var(--font-family-title, 'Nunito', sans-serif);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -129,7 +157,7 @@
 
 .showcase-unit-badge__number {
   font-family: var(--font-family-title, 'Nunito', sans-serif);
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 800;
   line-height: 1;
 }
@@ -138,8 +166,15 @@
 
 /* Laptop (1025px - 1440px) */
 @media (max-width: 1440px) {
-  .showcase-banner__bg {
-    height: 420px;
+  .showcase-group {
+    left: 20px;
+    width: 540px;
+  }
+
+  .showcase-card {
+    width: 360px;
+    height: 144px;
+    padding: 20px 24px;
   }
 }
 
@@ -150,11 +185,25 @@
   }
 
   .showcase-banner__bg {
-    height: 380px;
+    height: 400px;
+  }
+
+  .showcase-group {
+    left: 0;
+    width: 100%;
+  }
+
+  .showcase-card {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
   }
 
   .showcase-unit-badge {
-    left: calc(50% - 150px);
+    left: 20px;
+    width: 90px;
+    height: 90px;
+    bottom: -45px;
   }
 }
 
@@ -165,14 +214,29 @@
   }
 
   .showcase-banner__bg {
-    height: 320px;
+    height: 340px;
     padding: 0 16px;
   }
 
+  .showcase-group {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .showcase-card {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%;
+    max-width: 330px;
+    height: auto;
     padding: 16px 18px;
     gap: 14px;
-    max-width: 320px;
   }
 
   .showcase-card__thumb {
@@ -206,7 +270,7 @@
     width: 80px;
     height: 80px;
     bottom: -40px;
-    left: 24px;
+    left: 10px;
   }
 
   .showcase-unit-badge__label {
@@ -214,6 +278,6 @@
   }
 
   .showcase-unit-badge__number {
-    font-size: 22px;
+    font-size: 24px;
   }
 }
