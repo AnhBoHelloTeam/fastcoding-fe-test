@@ -43,19 +43,21 @@
   z-index: 2;
 }
 
-/* Badge 5 sao vuông vức góc trên bên phải */
+/* Badge 5 sao vuông vức 120x120 gác góc chuẩn Figma */
 .living-spaces__rating-badge {
   position: absolute;
   top: 0;
-  right: 0;
-  z-index: 3;
+  right: -25px;
+  width: 120px;
+  height: 120px;
   background-color: var(--color-dark);
-  padding: 24px 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   border-radius: 0;
+  z-index: 3;
 }
 
 .living-spaces__rating-icon {
@@ -70,6 +72,7 @@
   font-size: 14px;
   font-weight: 700;
   white-space: nowrap;
+  line-height: 1.2;
 }
 
 /* Cột nội dung bên phải */
@@ -249,7 +252,10 @@
   }
 
   .living-spaces__rating-badge {
-    padding: 16px 12px;
+    width: 85px;
+    height: 85px;
+    top: 0;
+    right: 0;
     gap: 4px;
   }
 

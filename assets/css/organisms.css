@@ -1,15 +1,3 @@
-/* --- 6. SERVICES SECTION --- */
-.services-section {
-  padding: var(--spacing-section) 0;
-  background-color: var(--color-bg-light);
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--spacing-xl);
-}
-
 /* --- 7. FEATURED PROPERTY SECTION --- */
 .featured-section {
   padding: var(--spacing-section) 0;
