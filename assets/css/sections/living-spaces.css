@@ -1,0 +1,299 @@
+/* Living Spaces section */
+
+.living-spaces-section {
+  padding: 100px 0 120px;
+  background-color: var(--color-white);
+  overflow: hidden;
+}
+
+.living-spaces__grid {
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Khối ảnh lồng ghép bên trái (Ghép khối đa giác chuẩn Figma) */
+.living-spaces__visual {
+  position: relative;
+  width: 494px;
+  height: 640px;
+}
+
+/* Khối xám phụ lệch phía sau bên dưới */
+.living-spaces__box-back {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 341px;
+  height: 527px;
+  background-color: #C4C4C4;
+  border-radius: 0;
+}
+
+/* Khối xám chính vươn cao bên phải */
+.living-spaces__box-front {
+  position: absolute;
+  left: 128px;
+  top: 15px;
+  width: 366px;
+  height: 560px;
+  background-color: #C4C4C4;
+  border-radius: 0;
+  z-index: 2;
+}
+
+/* Badge 5 sao vuông vức góc trên bên phải */
+.living-spaces__rating-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  background-color: var(--color-dark);
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  border-radius: 0;
+}
+
+.living-spaces__rating-icon {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.living-spaces__rating-text {
+  color: var(--color-white);
+  font-family: var(--font-family-title, 'Nunito', sans-serif);
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Cột nội dung bên phải */
+.living-spaces__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.living-spaces__title {
+  font-family: var(--font-family-title, 'Nunito', sans-serif);
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 56px;
+  letter-spacing: -0.69px;
+  color: var(--color-dark);
+  margin-bottom: 20px;
+}
+
+.living-spaces__desc {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  color: #899AA2;
+  max-width: 392px;
+  margin-bottom: 35px;
+}
+
+/* Danh sách tính năng */
+.living-spaces__features {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.living-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px 24px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 520px;
+  transition: all 0.3s ease;
+}
+
+/* Thẻ nổi bật mẫu (Active State trên Figma) */
+.living-feature--active,
+.living-feature:hover {
+  background-color: var(--color-white);
+  box-shadow: 0 14px 50px rgba(0, 0, 92, 0.08);
+}
+
+.living-feature__icon {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 2px;
+}
+
+.living-feature__icon img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.living-feature__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.living-feature__title {
+  font-family: var(--font-family-title, 'Nunito', sans-serif);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-dark);
+}
+
+.living-feature__desc {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #899AA2;
+  max-width: 315px;
+}
+
+/* --- Responsive --- */
+
+/* Laptop (1025px - 1440px) */
+@media (max-width: 1440px) {
+  .living-spaces__grid {
+    grid-template-columns: 460px 1fr;
+    gap: 50px;
+  }
+
+  .living-spaces__visual {
+    width: 450px;
+    height: 590px;
+  }
+
+  .living-spaces__box-back {
+    width: 310px;
+    height: 480px;
+  }
+
+  .living-spaces__box-front {
+    left: 110px;
+    width: 330px;
+    height: 510px;
+  }
+
+  .living-spaces__title {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+
+/* Tablet (769px - 1024px) */
+@media (max-width: 1024px) {
+  .living-spaces-section {
+    padding: 80px 0;
+  }
+
+  .living-spaces__grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .living-spaces__visual {
+    margin: 0 auto;
+  }
+
+  .living-spaces__content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .living-feature {
+    margin-left: 0;
+  }
+}
+
+/* Smartphone (<= 768px) */
+@media (max-width: 768px) {
+  .living-spaces-section {
+    padding: 60px 0;
+  }
+
+  .living-spaces__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .living-spaces__visual {
+    width: 100%;
+    max-width: 330px;
+    height: 420px;
+    margin: 0 auto;
+  }
+
+  .living-spaces__box-back {
+    width: 220px;
+    height: 340px;
+  }
+
+  .living-spaces__box-front {
+    left: 70px;
+    top: 15px;
+    width: 240px;
+    height: 360px;
+  }
+
+  .living-spaces__rating-badge {
+    padding: 16px 12px;
+    gap: 4px;
+  }
+
+  .living-spaces__rating-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .living-spaces__rating-text {
+    font-size: 11px;
+  }
+
+  .living-spaces__title {
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 16px;
+  }
+
+  .living-spaces__desc {
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
+
+  .living-spaces__features {
+    gap: 12px;
+  }
+
+  .living-feature {
+    margin-left: 0;
+    padding: 14px 16px;
+    gap: 14px;
+  }
+
+  .living-feature__icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .living-feature__title {
+    font-size: 19px;
+  }
+
+  .living-feature__desc {
+    font-size: 14px;
+    max-width: 100%;
+  }
+}

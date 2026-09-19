@@ -9,6 +9,10 @@
   padding-right: var(--container-padding);
 }
 
+.container--sm {
+  max-width: 1218px;
+}
+
 /* Buttons */
 .btn {
   display: inline-flex;
@@ -137,7 +141,7 @@
 
 /* Section headers */
 .section-header {
-  margin-bottom: var(--spacing-2xl);
+  margin-bottom: 60px;
 }
 
 .section-header--center {
@@ -159,17 +163,24 @@
 }
 
 .section-title {
-  font-size: var(--font-size-3xl);
-  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-title, 'Nunito', sans-serif);
+  font-size: 46px;
+  font-weight: 700;
   color: var(--color-heading);
-  margin-bottom: var(--spacing-sm);
-  letter-spacing: -0.5px;
+  line-height: 56px;
+  letter-spacing: -0.69px;
+  margin-bottom: 10px;
 }
 
 .section-desc {
-  font-size: var(--font-size-base);
-  color: var(--color-text);
-  line-height: var(--line-height-base);
+  font-family: var(--font-family-title, 'Nunito', sans-serif);
+  font-size: 18px;
+  font-weight: 400;
+  color: #9EABB2;
+  line-height: 28px;
+  max-width: 425px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Form controls */

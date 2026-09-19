@@ -4,5 +4,11 @@
 @import url('./variables.css');
 @import url('./atoms.css');
 @import url('./molecules.css');
+
+/* Sections */
+@import url('./sections/header.css');
+@import url('./sections/hero.css');
+@import url('./sections/guides.css');
+@import url('./sections/living-spaces.css');
 @import url('./organisms.css');
 @import url('./responsive.css');
