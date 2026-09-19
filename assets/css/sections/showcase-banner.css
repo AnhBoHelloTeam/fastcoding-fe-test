@@ -1,0 +1,219 @@
+/* Showcase / Video Banner Section */
+
+.showcase-banner {
+  position: relative;
+  width: 100%;
+  margin-bottom: 120px;
+}
+
+.showcase-banner__bg {
+  position: relative;
+  width: 100%;
+  height: 459px;
+  background-color: #C4C4C4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+/* Floating White Property Card */
+.showcase-card {
+  background-color: var(--color-white);
+  border-radius: 20px;
+  padding: 22px 28px;
+  box-shadow: 10px 14px 59px rgba(0, 0, 92, 0.12);
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  max-width: 380px;
+  width: 100%;
+  z-index: 2;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.showcase-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 10px 20px 65px rgba(0, 0, 92, 0.18);
+}
+
+.showcase-card__thumb {
+  width: 104px;
+  height: 86px;
+  border-radius: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.showcase-card__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.showcase-card__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.showcase-card__price {
+  font-family: var(--font-family-title, 'Nunito', sans-serif);
+  font-size: 26px;
+  font-weight: 700;
+  color: #071C1F;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.showcase-card__address {
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  color: #899AA2;
+  margin-bottom: 12px;
+}
+
+.showcase-card__features {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.showcase-card__feature-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #071C1F;
+}
+
+.showcase-card__feature-item img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* Orange Circular Unit Badge */
+.showcase-unit-badge {
+  position: absolute;
+  bottom: -50px;
+  left: calc(50% - 200px);
+  width: 100px;
+  height: 100px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  box-shadow: 0 10px 30px rgba(255, 90, 60, 0.35);
+  z-index: 3;
+  user-select: none;
+  transition: transform 0.3s ease;
+}
+
+.showcase-unit-badge:hover {
+  transform: scale(1.06);
+}
+
+.showcase-unit-badge__label {
+  font-family: var(--font-family-title, 'Nunito', sans-serif);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.showcase-unit-badge__number {
+  font-family: var(--font-family-title, 'Nunito', sans-serif);
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* --- Responsive --- */
+
+/* Laptop (1025px - 1440px) */
+@media (max-width: 1440px) {
+  .showcase-banner__bg {
+    height: 420px;
+  }
+}
+
+/* Tablet (769px - 1024px) */
+@media (max-width: 1024px) {
+  .showcase-banner {
+    margin-bottom: 90px;
+  }
+
+  .showcase-banner__bg {
+    height: 380px;
+  }
+
+  .showcase-unit-badge {
+    left: calc(50% - 150px);
+  }
+}
+
+/* Smartphone (<= 768px) */
+@media (max-width: 768px) {
+  .showcase-banner {
+    margin-bottom: 80px;
+  }
+
+  .showcase-banner__bg {
+    height: 320px;
+    padding: 0 16px;
+  }
+
+  .showcase-card {
+    padding: 16px 18px;
+    gap: 14px;
+    max-width: 320px;
+  }
+
+  .showcase-card__thumb {
+    width: 80px;
+    height: 70px;
+  }
+
+  .showcase-card__price {
+    font-size: 22px;
+  }
+
+  .showcase-card__address {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  .showcase-card__features {
+    gap: 10px;
+  }
+
+  .showcase-card__feature-item {
+    font-size: 12px;
+  }
+
+  .showcase-card__feature-item img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .showcase-unit-badge {
+    width: 80px;
+    height: 80px;
+    bottom: -40px;
+    left: 24px;
+  }
+
+  .showcase-unit-badge__label {
+    font-size: 10px;
+  }
+
+  .showcase-unit-badge__number {
+    font-size: 22px;
+  }
+}
