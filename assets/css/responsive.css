@@ -68,7 +68,7 @@
     /* Hiện nút 3 gạch hamburger */
   }
 
-  .navbar__menu {
+  .navbar__nav-group {
     position: absolute;
     top: 100%;
     left: 0;
@@ -77,20 +77,35 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 24px;
-    gap: 16px;
+    gap: 20px;
+    height: auto;
     box-shadow: var(--shadow-card);
     display: none;
-    /* Bật mở bằng class .is-open từ JS */
     border-top: 1px solid var(--color-border);
   }
 
-  .navbar__menu.is-open {
+  .navbar__nav-group.is-open {
     display: flex;
   }
 
+  .navbar__menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%;
+  }
+
   .navbar__actions {
-    display: none;
-    /* Gộp vào menu mobile hoặc ẩn nút signup phụ */
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+    padding-top: 16px;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .navbar__actions .btn {
+    width: 100%;
   }
 
   /* --- Hero SP --- */

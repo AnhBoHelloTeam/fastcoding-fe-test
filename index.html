@@ -38,7 +38,7 @@
         <div class="topbar__right">
           <div class="social-links">
             <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="social-link social-link--active" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
             <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
             <a href="#" class="social-link" aria-label="Youtube"><i class="fa-brands fa-youtube"></i></a>
             <a href="#" class="social-link" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
@@ -54,18 +54,21 @@
           <img src="./assets/images/common/logo.png" alt="Reanty Logo" class="navbar__brand-logo">
         </a>
 
-        <ul class="navbar__menu" id="navMenu">
-          <li><a href="#home" class="nav-link active">Home</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#feature" class="nav-link">Feature</a></li>
-          <li><a href="#market" class="nav-link">Market</a></li>
-          <li><a href="#services" class="nav-link">Services</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
+        <!-- Cụm nav ber: Menu + Log In + Sign Up chuẩn Figma -->
+        <div class="navbar__nav-group" id="navMenu">
+          <ul class="navbar__menu">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#feature" class="nav-link">Feature</a></li>
+            <li><a href="#market" class="nav-link">Market</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
 
-        <div class="navbar__actions">
-          <a href="#login" class="nav-link">Log In</a>
-          <a href="#signup" class="btn btn--primary">Sign Up</a>
+          <div class="navbar__actions">
+            <a href="#login" class="nav-link nav-link--login">Log In</a>
+            <a href="#signup" class="btn btn--primary btn--signup">Sign Up</a>
+          </div>
         </div>
 
         <!-- Mobile menu button -->

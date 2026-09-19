@@ -58,16 +58,36 @@
   object-fit: contain;
 }
 
+/* Cụm nav ber: Width ~963px, Height ~53px chuẩn Figma */
+.navbar__nav-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 40px;
+  height: 53px;
+}
+
 .navbar__menu {
   display: flex;
   align-items: center;
-  gap: var(--spacing-lg);
+  gap: 36px;
 }
 
 .navbar__actions {
   display: flex;
   align-items: center;
-  gap: var(--spacing-md);
+  gap: 32px;
+}
+
+.btn--signup {
+  height: 52px;
+  padding: 0 32px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Nút mở menu mobile (SP Hamburger) */
