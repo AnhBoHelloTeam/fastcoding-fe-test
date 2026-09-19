@@ -1,0 +1,354 @@
+/* About Home Section (Today Sells Properties) */
+
+.about-property-section {
+  padding: 100px 0 120px;
+  background-color: var(--color-white);
+  overflow: hidden;
+}
+
+.about-property__grid {
+  display: grid;
+  grid-template-columns: 1fr 585px;
+  gap: 40px;
+  align-items: stretch;
+}
+
+/* Cột nội dung bên trái: cao bằng cụm Mosaic và đẩy Stepper xuống chân */
+.about-property__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 560px;
+}
+
+.about-property__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Tag phân loại trên cùng */
+.about-property__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.about-property__tag-icon {
+  width: 17px;
+  height: 19px;
+  object-fit: contain;
+}
+
+.about-property__tag-text {
+  font-family: var(--font-family-title, 'Nunito', sans-serif);
+  font-size: 18px;
+  font-weight: 700;
+  color: #071C1F;
+}
+
+/* Tiêu đề chính */
+.about-property__title {
+  font-family: var(--font-family-title, 'Nunito', sans-serif);
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 56px;
+  letter-spacing: -0.69px;
+  color: var(--color-dark);
+  margin-bottom: 16px;
+}
+
+/* Đoạn mô tả (ngắt đều chữ popular sang dòng 1) */
+.about-property__desc {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  color: #899AA2;
+  max-width: 480px;
+  margin-bottom: 24px;
+}
+
+/* Checklist 5 dòng */
+.property-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.property-checklist__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.property-checklist__bullet {
+  width: 15px;
+  height: 11px;
+  background-color: var(--color-primary);
+  border-radius: 0;
+  flex-shrink: 0;
+}
+
+.property-checklist__text {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #899AA2;
+}
+
+/* Stepper mini dạng bậc thang (Staircase) */
+.about-property__stepper {
+  display: flex;
+  align-items: flex-end;
+  width: 418px;
+  height: 68px;
+}
+
+.about-property__stepper .stepper-tab {
+  margin-right: 2px;
+  color: #FFFFFF;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: flex-start;
+  border-radius: 0;
+}
+
+/* Bậc 1: cao nhất */
+.about-property__stepper .stepper-tab[data-house="1"] {
+  height: 68px;
+  width: 88px;
+  background-color: #8E8E8E;
+}
+
+/* Bậc 2: thấp hơn */
+.about-property__stepper .stepper-tab[data-house="2"] {
+  height: 46px;
+  width: 88px;
+  background-color: #A8A8A8;
+}
+
+/* Bậc 3: thấp nhất */
+.about-property__stepper .stepper-tab[data-house="3"] {
+  height: 28px;
+  width: 88px;
+  background-color: #C4C4C4;
+}
+
+.about-property__stepper .stepper-tab:hover {
+  filter: brightness(0.92);
+}
+
+/* Vạch tiến trình 2 màu cam + xám */
+.about-property__stepper .stepper-divider {
+  width: 42px;
+  height: 2px;
+  background: linear-gradient(to right, #FF5A3C 40%, #C4C4C4 40%);
+  margin: 0 14px 10px;
+  font-size: 0;
+  line-height: 0;
+  display: inline-block;
+  border: none;
+}
+
+.about-property__stepper .stepper-pagination {
+  margin-bottom: 3px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #808080;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.about-property__stepper .stepper-pagination .page-active {
+  color: #071C1F;
+  font-weight: 700;
+}
+
+.about-property__stepper .stepper-pagination .page-sep {
+  color: #808080;
+}
+
+/* Cột ảnh Mosaic bên phải */
+.about-property__mosaic {
+  display: flex;
+  align-items: stretch;
+  gap: 18px;
+  width: 585px;
+  height: 560px;
+}
+
+.about-property__mosaic-tall {
+  width: 310px;
+  height: 560px;
+  background-color: #C4C4C4;
+  border-radius: 0;
+  flex-shrink: 0;
+}
+
+.about-property__mosaic-stack {
+  width: 257px;
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.about-property__mosaic-top {
+  height: 290px;
+  background-color: #C4C4C4;
+  border-radius: 0;
+}
+
+.about-property__mosaic-bottom {
+  height: 251px;
+  background-color: #C4C4C4;
+  border-radius: 0;
+}
+
+/* --- Responsive --- */
+
+/* Laptop (1025px - 1440px) */
+@media (max-width: 1440px) {
+  .about-property__grid {
+    grid-template-columns: 1fr 520px;
+    gap: 30px;
+  }
+
+  .about-property__content {
+    height: 500px;
+  }
+
+  .about-property__mosaic {
+    width: 520px;
+    height: 500px;
+  }
+
+  .about-property__mosaic-tall {
+    width: 275px;
+    height: 500px;
+  }
+
+  .about-property__mosaic-stack {
+    width: 227px;
+  }
+
+  .about-property__mosaic-top {
+    height: 260px;
+  }
+
+  .about-property__mosaic-bottom {
+    height: 221px;
+  }
+
+  .about-property__title {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+
+/* Tablet (769px - 1024px) */
+@media (max-width: 1024px) {
+  .about-property-section {
+    padding: 80px 0;
+  }
+
+  .about-property__grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .about-property__content {
+    height: auto;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .about-property__stepper {
+    margin-top: 35px;
+  }
+
+  .about-property__mosaic {
+    margin: 0 auto;
+    max-width: 585px;
+    width: 100%;
+  }
+}
+
+/* Smartphone (<= 768px) */
+@media (max-width: 768px) {
+  .about-property-section {
+    padding: 60px 0;
+  }
+
+  .about-property__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-property__content {
+    height: auto;
+  }
+
+  .about-property__title {
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 14px;
+  }
+
+  .about-property__desc {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  .property-checklist {
+    gap: 14px;
+  }
+
+  .property-checklist__text {
+    font-size: 14px;
+  }
+
+  .about-property__stepper {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    margin-top: 28px;
+  }
+
+  .about-property__mosaic {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .about-property__mosaic-tall {
+    width: 100%;
+    height: 260px;
+  }
+
+  .about-property__mosaic-stack {
+    width: 100%;
+    flex-direction: row;
+    gap: 14px;
+  }
+
+  .about-property__mosaic-top {
+    width: 50%;
+    height: 160px;
+  }
+
+  .about-property__mosaic-bottom {
+    width: 50%;
+    height: 160px;
+  }
+}
