@@ -46,15 +46,13 @@
 .navbar__brand {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-heading);
 }
 
 .navbar__brand-logo {
-  height: 32px;
+  height: 38px;
   width: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .navbar__menu {
@@ -90,88 +88,161 @@
 
 /* --- 2. HERO SECTION ORGANISM --- */
 .hero {
-  padding: 80px 0 100px;
-  background-color: #FAFCFD;
+  padding: 40px 0 90px;
+  background-color: var(--color-white);
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .hero__grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: var(--spacing-3xl);
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 60px;
   align-items: center;
 }
 
 .hero__content {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-lg);
   position: relative;
 }
 
 .hero__title {
-  font-size: var(--font-size-hero);
-  font-weight: var(--font-weight-bold);
+  font-size: 54px;
+  font-weight: 700;
   color: var(--color-heading);
-  line-height: 1.15;
+  line-height: 1.18;
   letter-spacing: -1px;
+  position: relative;
+  margin-bottom: 20px;
 }
 
 .hero__title-arrow {
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 12px;
-  width: 80px;
+  position: absolute;
+  top: 85px;
+  left: 235px;
+  width: 175px;
   height: auto;
+  pointer-events: none;
 }
 
 .hero__desc {
-  font-size: var(--font-size-md);
+  font-size: 15px;
   color: var(--color-text);
-  max-width: 480px;
+  max-width: 440px;
   line-height: 1.7;
+  margin-bottom: 28px;
 }
 
+.hero__actions {
+  margin-bottom: 48px;
+}
+
+/* Stepper tab góc dưới trái */
+.hero__stepper-nav {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 10px;
+}
+
+.stepper-tab {
+  background: #C4C4C4;
+  color: #FFFFFF;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 6px 14px 28px;
+  margin-right: 2px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.stepper-tab:hover {
+  background: #A0A0A0;
+}
+
+.stepper-tab--active {
+  background: #8E8E8E;
+  padding: 10px 18px 42px;
+}
+
+.stepper-divider {
+  margin: 0 14px 10px;
+  color: #071C1F;
+  font-weight: bold;
+}
+
+.stepper-pagination {
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #808080;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stepper-pagination .page-active {
+  color: #071C1F;
+  font-weight: 700;
+}
+
+.stepper-pagination .page-sep {
+  color: #C4C4C4;
+}
+
+/* Hero Right: Khối chữ nhật xám lớn */
 .hero__image-wrapper {
   position: relative;
   width: 100%;
-  height: 480px;
+  height: 560px;
 }
 
-.hero__main-image {
+.hero__placeholder-box {
   width: 100%;
   height: 100%;
-  background-color: var(--color-placeholder);
-  border-radius: var(--radius-2xl);
-  object-fit: cover;
+  background-color: #C4C4C4;
+  border-radius: 4px;
 }
 
 .hero__stat-card {
-  bottom: 40px;
+  position: absolute;
+  bottom: -30px;
   left: -40px;
+  background-color: var(--color-white);
+  border-radius: 20px;
+  padding: 22px 32px;
+  box-shadow: 0 14px 45px rgba(0, 0, 92, 0.08);
+  z-index: 3;
 }
 
 .hero__video-card {
-  bottom: 80px;
-  right: -20px;
-}
-
-/* Slider indicators đáy hero */
-.hero__slider-nav {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #FF5A3C;
+  color: var(--color-white);
+  padding: 14px 24px;
+  border-radius: 8px 0 4px 0;
   display: flex;
   align-items: center;
-  gap: 24px;
-  margin-top: 40px;
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-text-muted);
+  gap: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: none;
+  z-index: 3;
 }
 
-.hero__slider-item.active {
-  color: var(--color-heading);
-  border-bottom: 2px solid var(--color-primary);
-  padding-bottom: 4px;
+.video-play-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  color: #FF5A3C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  padding-left: 2px;
 }
 
 /* --- 3. COMMERCIAL REAL ESTATE GUIDES --- */

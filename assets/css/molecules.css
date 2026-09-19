@@ -61,6 +61,17 @@
   color: var(--color-primary);
 }
 
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 12px;
+  right: 12px;
+  height: 2px;
+  background-color: var(--color-primary);
+  border-radius: 2px;
+}
+
 /* --- 3. THẺ STATS NỔI (Hero Floating Molecules) --- */
 .floating-stat-card {
   position: absolute;
