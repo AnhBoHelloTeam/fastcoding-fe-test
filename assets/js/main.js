@@ -31,11 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Property tabs
-  const tabButtons = document.querySelectorAll('.tab-btn');
-  tabButtons.forEach(btn => {
+  // Featured Property tabs
+  const propertyTabs = document.querySelectorAll('.featured__tab, .tab-btn');
+  propertyTabs.forEach(btn => {
     btn.addEventListener('click', () => {
-      tabButtons.forEach(b => b.classList.remove('active'));
+      propertyTabs.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
     });
   });
