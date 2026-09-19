@@ -54,7 +54,8 @@
 
   /* --- Topbar SP --- */
   .topbar {
-    display: none; /* Ẩn thanh topbar trên điện thoại cho gọn hoặc cho stack */
+    display: none;
+    /* Ẩn thanh topbar trên điện thoại cho gọn hoặc cho stack */
   }
 
   /* --- Navbar & SP Mobile Menu --- */
@@ -63,7 +64,8 @@
   }
 
   .navbar__toggle {
-    display: flex; /* Hiện nút 3 gạch hamburger */
+    display: flex;
+    /* Hiện nút 3 gạch hamburger */
   }
 
   .navbar__menu {
@@ -77,7 +79,8 @@
     padding: 24px;
     gap: 16px;
     box-shadow: var(--shadow-card);
-    display: none; /* Bật mở bằng class .is-open từ JS */
+    display: none;
+    /* Bật mở bằng class .is-open từ JS */
     border-top: 1px solid var(--color-border);
   }
 
@@ -86,7 +89,8 @@
   }
 
   .navbar__actions {
-    display: none; /* Gộp vào menu mobile hoặc ẩn nút signup phụ */
+    display: none;
+    /* Gộp vào menu mobile hoặc ẩn nút signup phụ */
   }
 
   /* --- Hero SP --- */
@@ -99,7 +103,8 @@
   }
 
   .hero__title-arrow {
-    display: none; /* Ẩn mũi tên vẽ tay nếu chật màn hình */
+    display: none;
+    /* Ẩn mũi tên vẽ tay nếu chật màn hình */
   }
 
   .hero__image-wrapper {
