@@ -6,3 +6,6 @@ _raw/
 Thumbs.db
 .vscode/
 .idea/
+
+# Thư mục nháp / crop tạm thời
+scratch/
