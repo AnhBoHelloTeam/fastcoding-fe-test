@@ -240,6 +240,7 @@
   .properties-grid,
   .testimonial-grid,
   .projects-grid,
+  .projects__grid,
   .blogs-grid,
   .contact-grid {
     grid-template-columns: 1fr;
