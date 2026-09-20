@@ -242,6 +242,7 @@
   .projects-grid,
   .projects__grid,
   .blogs-grid,
+  .blog__grid,
   .contact-grid {
     grid-template-columns: 1fr;
     gap: var(--spacing-lg);
